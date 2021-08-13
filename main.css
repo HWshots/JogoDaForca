@@ -1,0 +1,106 @@
+:root {
+    --black: black;
+    --white: white;
+    --gray: #eee;
+    --border: greenyellow;
+    --alternative: orange;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--black);
+    font-family: sans-serif;
+    margin: 0;
+}
+
+html, body {
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--white);
+    width: 600px;
+    height: 600px;
+    border: 5px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+p {
+    display: block;
+    font-size: 1em;
+    text-align: center;
+    padding: 10px;
+}
+
+button {
+    margin-top: 20px;
+    background-color: var(--border);
+    padding: 5px 15px;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--black);
+    cursor: pointer;
+}
+
+#play {
+    background-color: var(--alternative);
+}
+
+input {
+    max-width: 50px;
+    height: 30px;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resultado {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.letters {
+    display: inline-block;
+    margin: 5px;
+    border-bottom: 1px solid black;
+    min-width: 10px;
+    min-height: 20px;
+}
+
+.image {
+    height: 108px;
+    width: 115px;
+}
