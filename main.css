@@ -8,6 +8,7 @@
 }
 
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color: var(--black);
     font-family: sans-serif;
@@ -23,8 +24,14 @@ html, body {
 
 body {
     background-color: var(--black);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -72,7 +79,7 @@ button {
     cursor: pointer;
 }
 
-#exit{
+#exit {
     margin: 0;
     background-color: var(--red);
     padding: 5px 15px;
@@ -98,14 +105,26 @@ input {
 }
 
 .game {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .resultado {
     margin: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
 }
 
