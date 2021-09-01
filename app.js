@@ -29,13 +29,13 @@ let jogadas = 5;
 let playLetters = 0;
 
 function init() {
-    h2.textContent = "Tentativas: " + jogadas + " de 5"
+    h2.textContent = "Tentativas: " + jogadas + " de 5";
     randomGeneratedNumber = Math.floor(Math.random() * wordList.length);
     secretWord = wordList[randomGeneratedNumber];
     console.log("Palavra secreta: " + secretWord);
     for (let i = 0; i < secretWord.length; i++) {
         const letters = document.createElement("div");
-        letters.classList.add("letters")
+        letters.classList.add("letters");
         letters.textContent = " ";
         result.appendChild(letters);
     }
@@ -70,7 +70,7 @@ function play() {
         } else {
             jogadas--;
         }
-        h2.textContent = "Tentativas: " + jogadas + " de 5"
+        h2.textContent = "Tentativas: " + jogadas + " de 5";
         console.log("letras certas: " + playLetters);
         console.log("jogadas: " + jogadas);
         check();
@@ -114,7 +114,7 @@ function reset() {
 }
 
 newGameBtn.addEventListener('click', reset);
-playBtn.addEventListener('click', play)
+playBtn.addEventListener('click', play);
 
 init();
 
