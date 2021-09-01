@@ -65,14 +65,11 @@ function play() {
             }
             result.appendChild(letters);
         }
-        console.log("letrasAnt: " + letrasAnt);
         if (letrasAnt != playLetters){
-            
             letrasAnt = playLetters;
         } else {
             jogadas--;
         }
-        console.log("letrasAnt2: " + letrasAnt);
         h2.textContent = "Tentativas: " + jogadas + " de 5"
         console.log("letras certas: " + playLetters);
         console.log("jogadas: " + jogadas);
