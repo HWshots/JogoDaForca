@@ -22,6 +22,7 @@ image.style.background = imagesArr[5];
 let secretWord;
 let playWord = [];
 let cacheL = [];
+let letrasAnt = 0;
 const result = document.querySelector(".resultado");
 
 let jogadas = 5;
@@ -44,9 +45,8 @@ function init() {
 function play() {
     
     inputLetter.onchange = function () {
+        
         playLetters = 0;
-        jogadas--;
-        h2.textContent = "Tentativas: " + jogadas + " de 5"
         result.innerHTML = "";
         console.log("letra jogada: " + inputLetter.value);
         cacheL.push(inputLetter.value);
@@ -65,6 +65,15 @@ function play() {
             }
             result.appendChild(letters);
         }
+        console.log("letrasAnt: " + letrasAnt);
+        if (letrasAnt != playLetters){
+            
+            letrasAnt = playLetters;
+        } else {
+            jogadas--;
+        }
+        console.log("letrasAnt2: " + letrasAnt);
+        h2.textContent = "Tentativas: " + jogadas + " de 5"
         console.log("letras certas: " + playLetters);
         console.log("jogadas: " + jogadas);
         check();
@@ -95,9 +104,9 @@ function check() {
 function reset() {
     playWord = [];
     jogadas = 5;
+    letrasAnt = 0;
     playLetters = 0;
     cacheL = [];
-    
     usedLetters.textContent = "Letras jogadas: " ;
     result.innerHTML = '';
     score.innerHTML = '';
