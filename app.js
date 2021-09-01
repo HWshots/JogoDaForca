@@ -78,6 +78,7 @@ function play() {
         console.log("jogadas: " + jogadas);
         check();
         inputLetter.value = "";
+        inputLetter.focus();
     }
 }
 
